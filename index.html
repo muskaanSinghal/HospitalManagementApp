@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Work</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-cartesian.min.js"></script>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="firstPage">
+      <img src="background.jpg" class="background" />
+      <div class="header">
+        <div class="upper">
+          <img src="icon.jpg" alt="logo" class="logo" />
+          <div>NewHospital!</div>
+        </div>
+        <div>About Us!</div>
+      </div>
+      <div class="welcomeContainer">
+        <div class="container">
+          <div class="heading">
+            The Highest Quality Healthcare.<br />
+            The hospital you trust to care for those you love.<br />
+            The Power to Heal.
+          </div>
+          <button class="btn logIn card">Click to LogIn!</button>
+        </div>
+      </div>
+    </div>
+    <div class="secondPage">
+      <div class="tabsContainer admintabsContainer">
+        <div class="tabContainer card" data-tab="1">
+          <h1>Are you a staff member ?</h1>
+          <form class="tab staff">
+            <label for id="staff">Id:</label>
+            <input type="text" class="card staffNameInput" />
+            <label>Password :</label>
+            <input
+              type="password"
+              autocomplete="on"
+              class="card staffPassInput"
+            />
+
+            <button class="btn card staffSubmitBtn">Submit</button>
+          </form>
+        </div>
+        <div class="tabContainer card" data-tab="2">
+          <h1>Are you an Admin?</h1>
+          <form class="tab admin">
+            <label for id="admin">Id:</label>
+            <input type="text" class="card adminNameInput" />
+            <label>Password :</label>
+            <input
+              type="password"
+              autocomplete="on"
+              class="card adminPassInput"
+            />
+            <button class="btn card adminSubmitBtn">Submit</button>
+          </form>
+        </div>
+        <div class="tabContainer card" data-tab="3">
+          <h1>Are you a doctor ?</h1>
+          <form class="tab doctor">
+            <label for id="Doctor">Id:</label>
+            <input type="text" class="card doctorNameInput" />
+            <label>Password :</label>
+            <input
+              type="password"
+              autocomplete="on"
+              class="card doctorPassInput"
+            />
+            <button class="btn card doctorSubmitBtn">Submit</button>
+          </form>
+        </div>
+
+        <div class="btnContainer">
+          <button class="returnBtn btn card">Return !</button>
+        </div>
+      </div>
+    </div>
+
+    <!--admin section-->
+
+    <div class="adminSection thirdPage">
+      <div class="welcomeNote adminWelcomeNote"></div>
+      <div class="portalsContainer card">
+        <button class="staffAdder portalBtn card" id="staff">
+          Add New Staff !
+        </button>
+        <button class="doctorAdder portalBtn card" id="doctors">
+          Add New Doctor !
+        </button>
+        <button class="adminAdder portalBtn card" id="admins">
+          Add New Admin !
+        </button>
+      </div>
+      <div class="lower">
+        <form class="adderForm card form">
+          <label class="label name">Name :</label>
+          <input type="text" class="value card nameValue" />
+          <label class="label age">Age :</label>
+          <input type="number" class="value card ageValue" />
+          <label class="label gender">Gender :</label>
+          <select class="value card genderValue">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+          <label class="label password">Password :</label>
+          <input type="password" class="passwordValue value card" />
+          <button type="submit" class="btn addUserBtn card">Add</button>
+        </form>
+
+        <div id="container" class="card"></div>
+      </div>
+      <div class="btnContainer">
+        <button class="adminReturnBtn btn card">Return !</button>
+      </div>
+    </div>
+    <!-- admin section ends  -->
+
+    <!-- staff section starts -->
+    <div class="staffSection fourthPage">
+      <div class="staffWelcomeNote welcomeNote">Welcome !</div>
+      <div class="portalsContainer card">
+        <button class="staffRegisterBtn portalBtn card">
+          Register new patient :
+        </button>
+        <button class="staffViewPatientBtn portalBtn card">
+          View Patients
+        </button>
+      </div>
+      <div class="lower">
+        <form class="formContainer staffFormContainer card">
+          <label>Name :</label>
+          <input type="text" class="staffPortalNameInput value card" />
+          <label>Age :</label>
+          <input type="number" class="staffPortalAgeInput value card" />
+          <label>Date :</label>
+          <input type="date" class="staffPortalDateInput value card" />
+          <label>Consulting Doctor :</label>
+          <input type="text" class="staffPortalDoctorInput value card" />
+          <label>Recovery Rate :</label>
+          <input
+            type="number"
+            class="staffPortalRecoveryRateInput value card"
+          />
+          <button type="submit" class="btn staffAddPatientBtn card">Add</button>
+        </form>
+        <div id="container1" class="card lineChartContainer"></div>
+      </div>
+      <button class="staffReturnBtn btn card">Return</button>
+    </div>
+    <!-- staff section ends -->
+    <div class="viewPatient"></div>
+
+    <!-- doctor section begins -->
+    <div class="doctorSection fifthPage">
+      <div class="doctorWelcomeNote welcomeNote">Welcome !</div>
+      <div class="portalsContainer card">
+        <button class="editRecoveryRateBtn portalBtn card">
+          Edit Recovery Rate!
+        </button>
+        <button class="doctorViewPatientBtn portalBtn card">
+          View Patients
+        </button>
+      </div>
+      <div class="lower">
+        <form class="formContainer doctorFormContainer card">
+          <label>Patient ID :</label>
+          <input type="text" class="doctorPortalNameInput value card" />
+          <label>Recovery Rate :</label>
+          <input type="number" class="doctorPortalRecoveryInput value card" />
+          <button type="submit" class="btn formEditRecoveryBtn card">
+            Add
+          </button>
+        </form>
+        <div id="container2" class="card doctorLineChartContainer"></div>
+      </div>
+      <button class="doctorReturnBtn btn card">Return</button>
+    </div>
+    <!-- doctor section ends -->
+  </body>
+</html>

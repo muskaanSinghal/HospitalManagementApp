@@ -1,0 +1,335 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+.hidden {
+  display: none;
+}
+
+.tab {
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: 1fr 3fr;
+  gap: 15px;
+  width: 50vw;
+}
+
+.tabContainer {
+  margin: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 25vh;
+  transition: transform 0.5s;
+  padding: 15vh;
+  background-color: rgba(148, 219, 216, 0.6);
+}
+
+.card {
+  border-radius: 30px;
+  border: 2px solid grey;
+  box-shadow: 5px 5px 5px black;
+}
+
+.animate {
+  transform: translateY(-10px);
+}
+
+.tabContainer label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tabContainer input {
+  border: 1px solid rgb(65, 61, 61);
+  background-color: rgb(169, 200, 207);
+  padding: 8px;
+}
+.tabContainer input:hover,
+.tabContainer input:focus {
+  outline: none;
+  background-color: white;
+}
+
+.btn {
+  width: 10vw;
+  height: 5vh;
+  color: white;
+  background-color: black;
+}
+
+.tabsContainer {
+  background: linear-gradient(to top left, rgb(42, 61, 61), rgb(47, 81, 87));
+  padding: 15px;
+}
+
+.active {
+  background-color: rgb(206, 233, 233);
+}
+
+/* Welcome section */
+.background {
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  z-index: -1;
+  height: 80vh;
+  width: 80vw;
+  filter: contrast(100%);
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+/* 
+.welcomeContainer {
+  /* background: linear-gradient(to right, gray, black); */
+/* height: 100vh;
+  width: 100vw;
+  opacity: 0.9;
+  background-color: black;
+} */
+
+.container {
+  color: white;
+  font-size: 35px;
+  height: 100vh;
+  width: 40vw;
+  margin-left: 55vw;
+  /* border: 5px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 60px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  flex-direction: column;
+}
+.logIn {
+  margin: 30px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 10vh;
+  z-index: -1;
+}
+
+.logo {
+  height: 8vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+
+.upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.btnContainer {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adminPortal {
+  position: fixed;
+  top: 0;
+  width: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: bisque;
+}
+
+.heading {
+  position: relative;
+}
+
+.heading::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  height: 110%;
+  width: 120%;
+  background: linear-gradient(
+    to left,
+    transparent 0%,
+    rgb(65, 63, 63) 5%,
+    rgb(80, 76, 76) 100%
+  );
+  animation: animate 3s linear 1 forwards;
+}
+
+@keyframes animate {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+.thirdPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(193, 201, 216);
+  margin: 5px;
+  padding: 20px;
+}
+
+.portalsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid grey;
+  height: 30vh;
+  width: 80vw;
+  margin: 10vh;
+  background-color: rgb(124, 152, 204);
+}
+
+.portalBtn {
+  padding: 25px;
+  height: 5vh;
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  border: 5px double cornflowerblue;
+  background-color: rgb(23, 66, 139);
+}
+
+.adderForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  border: 1px solid grey;
+  font-size: 24px;
+  padding: 25px;
+}
+
+.adderForm input {
+  padding: 10px;
+}
+
+.value {
+  outline: none;
+  border: 1px solid cornflowerblue;
+  padding: 10px;
+}
+
+.lower {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5vh;
+}
+
+#container,
+#container1,
+#container2 {
+  height: 40vh;
+  width: 50vw;
+  padding: 25px;
+}
+
+.welcomeNote {
+  border: 2px solid rgb(95, 90, 90);
+  font-size: 24px;
+  font-size: bold;
+  padding: 25px;
+}
+/* general form class */
+
+.formContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  border: 1px solid grey;
+  font-size: 24px;
+  padding: 25px;
+}
+
+.fourthPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(193, 201, 216);
+  margin: 5px;
+  padding: 20px;
+}
+
+.firstPage {
+  overflow: hidden;
+}
+
+.patientList {
+  /* height: 100vh; */
+  width: 100vw;
+}
+
+.viewPatient {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 100vh; */
+  width: 100vw;
+  background-color: rgba(223, 228, 238, 0.6);
+}
+
+.viewPatientReturnBtn {
+  margin: 25px;
+}
+
+.patient {
+  border: 1px solid gray;
+}
+
+td,
+th {
+  border: 1px solid gray;
+  text-align: center;
+  height: 5vh;
+}
+
+body {
+  background-color: rgb(185, 174, 174);
+}
+
+.viewPatientBtn {
+  width: 100%;
+}
+
+.fifthPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(193, 201, 216);
+  margin: 5px;
+  padding: 20px;
+}

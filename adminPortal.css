@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#container {
+  height: 50vh;
+  width: 50vw;
+  border: 5px solid red;
+  transition: all 1s;
+}
+
+.adder {
+  padding: 25px;
+}
